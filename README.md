@@ -1,2 +1,2 @@
-# cocos_design_demo
-用cocos做设计的一些例子
+# cocos_demos
+用cocos做的一些例子
