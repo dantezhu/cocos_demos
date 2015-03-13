@@ -16,9 +16,9 @@ function __G__TRACKBACK__(msg)
 end
 
 local function appRun1()
-    local app = require("GameApp").new()
+    local app = require("MyApp").new()
     app:run()
-    app:showView("GameView")
+    app:showView("MainView")
 end
 
 local function main()
