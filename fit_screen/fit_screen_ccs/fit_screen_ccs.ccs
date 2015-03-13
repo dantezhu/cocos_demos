@@ -1,0 +1,13 @@
+<Solution>
+  <PropertyGroup Name="fit_screen_ccs" Version="2.1.5.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Project Name="Main.csd" />
+        <Image Name="LI01.png" />
+        <Image Name="LI02.png" />
+        <Image Name="LI07.png" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
