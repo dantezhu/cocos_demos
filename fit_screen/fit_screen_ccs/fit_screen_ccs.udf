@@ -1,3 +1,24 @@
 <UserData>
-  <Properties />
+  <OpenedDocuments>
+    <FilePathData Path="Main.csd" />
+  </OpenedDocuments>
+  <ActiveDocument Path="Main.csd" />
+  <Properties>
+    <Item Key="PackageParamsKey">
+      <Value ctype="PackageParams">
+        <LuaIsEncrypt Value="False" />
+        <LuaEncryptKey Value="" />
+        <LuaEncryptSign Value="" />
+        <Android_PackageName Value="org.cocos.fitscreenccs" />
+        <AndroidkeyStore Value="" />
+        <AndroidVersion Value="" />
+        <iOS_Target Value="fit_screen_ccs iOS" />
+        <iOS_BundleID Value="iPhone Developer: Haiyan Lin (LXQ324VH7A)" />
+        <Platform Value="Android" />
+        <PublishSetting Value="Resource" />
+        <FrameworkVersion Value="cocos2d-x-3.4" />
+        <IsDebugKeystore Value="True" />
+      </Value>
+    </Item>
+  </Properties>
 </UserData>
