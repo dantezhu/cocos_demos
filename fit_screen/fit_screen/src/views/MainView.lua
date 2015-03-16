@@ -7,7 +7,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("Main.csb")
     
-    ccutils.fit_full_screen(node)
+    neon_utils.fit_full_screen(node)
 
     return node
 end

@@ -1,6 +1,6 @@
 [submodule "modules/neon"]
 	path = modules/neon
 	url = https://github.com/dantezhu/neon.git
-[submodule "modules/ccutils"]
-	path = modules/ccutils
-	url = https://github.com/dantezhu/ccutils.git
+[submodule "modules/neon_utils"]
+	path = modules/neon_utils
+	url = https://github.com/dantezhu/neon_utils.git
