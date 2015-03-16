@@ -5,6 +5,7 @@ cc.FileUtils:getInstance():addSearchPath("res")
 
 require "cocos.init"
 require "neon.init"
+require "share.Utils"
 
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
