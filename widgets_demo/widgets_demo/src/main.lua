@@ -19,7 +19,7 @@ end
 local function appRun1()
     local app = require("MyApp").new()
     app:run()
-    app:showView("MainView")
+    app:showView("TestPageView")
 end
 
 local function main()
