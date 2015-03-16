@@ -4,6 +4,7 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Project Name="PageViewScene.csd" Type="Scene" />
+        <Project Name="PanelScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -29,7 +29,7 @@ local function main()
     collectgarbage("setstepmul", 5000)
     
     -- 设计分辨率
-    cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(768, 1024, cc.ResolutionPolicy.FIXED_WIDTH)
+    cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(640, 960, cc.ResolutionPolicy.FIXED_WIDTH)
 
     appRun1()
 end
