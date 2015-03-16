@@ -1,7 +1,7 @@
 local M = neon.class("MainView", neon.View)
 
 function M:onCreate()
-    neon.loge("onCreate " .. self.__cname)
+    neon.loge("onCreate %s", self.__cname)
 end
 
 function M:createRoot()
@@ -20,7 +20,7 @@ function M:createRoot()
 end
 
 function M:onRemove()
-    neon.loge("onRemove " .. self.__cname)
+    neon.loge("onRemove %s", self.__cname)
 end
 
 return M
