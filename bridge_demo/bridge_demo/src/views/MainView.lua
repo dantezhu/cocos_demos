@@ -16,7 +16,7 @@ function M:onCreate()
 
     if device.platform == 'ios' then
         local luaoc = require('cocos.cocos2d.luaoc')
-        luaoc.callStaticMethod("RootViewController", "doSomething", {callback = callback})
+        luaoc.callStaticMethod("AppController", "doSomething", {callback = callback})
     end
 end
 
