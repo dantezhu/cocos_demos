@@ -5,6 +5,8 @@
       <RootFolder Name=".">
         <Project Name="PageViewScene.csd" Type="Scene" />
         <Project Name="PanelScene.csd" Type="Scene" />
+        <Project Name="ListViewScene.csd" Type="Scene" />
+        <Project Name="ScrollViewScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
