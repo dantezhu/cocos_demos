@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BDF77D35-AEE9-4724-AA92-F11394C9BFDC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>bridge_demo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>885F6D34D0A6A70C6B123E654AEBB9404A010E50</key>
+		<string>https://github.com/dantezhu/neon_utils.git</string>
+		<key>EECC8B09672D72E931E0AB584A37C24078A6FF9C</key>
+		<string>github.com:dantezhu/cocos_demos.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>bridge_demo/bridge_demo/frameworks/runtime-src/proj.ios_mac/bridge_demo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>885F6D34D0A6A70C6B123E654AEBB9404A010E50</key>
+		<string>../../../../../../..bridge_demo/bridge_demo/src/neon_utils</string>
+		<key>EECC8B09672D72E931E0AB584A37C24078A6FF9C</key>
+		<string>../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:dantezhu/cocos_demos.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EECC8B09672D72E931E0AB584A37C24078A6FF9C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EECC8B09672D72E931E0AB584A37C24078A6FF9C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos_demos</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>885F6D34D0A6A70C6B123E654AEBB9404A010E50</string>
+			<key>IDESourceControlWCCName</key>
+			<string>neon_utils</string>
+		</dict>
+	</array>
+</dict>
+</plist>
