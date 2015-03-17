@@ -9,4 +9,8 @@ function M:onCreate()
     self:registerView(require("views.TestPageView"))
 end
 
+function M:onEnterTransitionFinish()
+    self:showView("TestPageView")
+end
+
 return M

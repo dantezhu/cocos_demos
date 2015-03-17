@@ -9,4 +9,8 @@ function M:onCreate()
     self:registerView(require("views.MainView"))
 end
 
+function M:onEnterTransitionFinish()
+    self:showView("MainView")
+end
+
 return M

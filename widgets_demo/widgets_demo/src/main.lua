@@ -16,12 +16,6 @@ function __G__TRACKBACK__(msg)
     return msg
 end
 
-local function appRun1()
-    local app = require("MyApp").new()
-    app:run()
-    app:showView("TestPageView")
-end
-
 local function main()
     collectgarbage("collect")
     -- avoid memory leak
@@ -31,7 +25,7 @@ local function main()
     -- 设计分辨率
     cc.Director:getInstance():getOpenGLView():setDesignResolutionSize(640, 960, cc.ResolutionPolicy.FIXED_WIDTH)
 
-    appRun1()
+    require("MyApp").new():run()
 end
 
 
