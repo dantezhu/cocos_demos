@@ -19,7 +19,7 @@ function M:onCreate()
     end
 
     
-    local listView = neon_utils.seekNodeByName(self.root, "ListView_1")
+    local listView = cckit.seekNodeByName(self.root, "ListView_1")
     listView:addEventListener(listViewEvent)
     listView:addScrollViewEventListener(scrollViewEvent)
 end
@@ -27,7 +27,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("ListViewScene.csb")
     
-    neon_utils.fit_full_screen(node)
+    cckit.fitFullScreen(node)
 
     return node
 end

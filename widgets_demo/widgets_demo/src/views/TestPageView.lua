@@ -3,7 +3,7 @@ local M = class("TestPageView", neon.View)
 function M:onCreate()
     neon.loge("onCreate %s", self.__cname)
     
-    local pageViewMain = neon_utils.seekNodeByName(self.root, 'pageview_main')
+    local pageViewMain = cckit.seekNodeByName(self.root, 'pageview_main')
     pageViewMain:addEventListener(function (sender, eventType)
             neon.logd("eventType: %s, page: %s", getmetatable(eventType), sender:getCurPageIndex())
     end)
@@ -13,7 +13,7 @@ function M:createRoot()
     local node = cc.CSLoader:createNode("PageViewScene.csb")
     -- local node = cc.CSLoader:createNode("PanelScene.csb")
     
-    neon_utils.fit_full_screen(node)
+    cckit.fitFullScreen(node)
 
     return node
 end

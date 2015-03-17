@@ -1,3 +1,6 @@
 [submodule "modules/neon"]
 	path = modules/neon
 	url = https://github.com/dantezhu/neon.git
+[submodule "modules/cckit"]
+	path = modules/cckit
+	url = https://github.com/dantezhu/cckit.git

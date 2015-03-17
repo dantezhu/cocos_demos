@@ -8,7 +8,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("ScrollViewScene.csb")
     
-    neon_utils.fit_full_screen(node)
+    cckit.fitFullScreen(node)
 
     return node
 end
