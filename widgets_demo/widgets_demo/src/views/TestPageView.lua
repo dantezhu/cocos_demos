@@ -13,7 +13,7 @@ function M:createRoot()
     local node = cc.CSLoader:createNode("PageViewScene.csb")
     -- local node = cc.CSLoader:createNode("PanelScene.csb")
     
-    cckit.fitFullScreen(node)
+    cckit.fillScreen(node)
 
     return node
 end

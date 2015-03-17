@@ -7,7 +7,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("Main.csb")
     
-    cckit.fitFullScreen(node)
+    cckit.fillScreen(node)
 
     return node
 end

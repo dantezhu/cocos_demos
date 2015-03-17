@@ -27,7 +27,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("ListViewScene.csb")
     
-    cckit.fitFullScreen(node)
+    cckit.fillScreen(node)
 
     return node
 end
