@@ -50,11 +50,15 @@ import android.text.format.Formatter;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
+import org.cocos2dx.lib.Cocos2dxLuaJavaBridge;
 
 
 public class AppActivity extends Cocos2dxActivity{
 
     static String hostIPAdress = "0.0.0.0";
+
+    public static int onStateChangeCallback = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,6 +126,28 @@ public class AppActivity extends Cocos2dxActivity{
     
     public static String getLocalIpAddress() {
         return hostIPAdress;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        callLuaFunction(onStateChangeCallback, "active");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        callLuaFunction(onStateChangeCallback, "inactive");
+    }
+
+    public static void registerStateChangeCallback(int cb) {
+        onStateChangeCallback = cb;
+    }
+
+    public static void callLuaFunction(int functionId, String state) {
+        if (functionId <=0) return;
+
+        Cocos2dxLuaJavaBridge.callLuaFunctionWithString(onStateChangeCallback, state);
     }
     
     private static native boolean nativeIsLandScape();

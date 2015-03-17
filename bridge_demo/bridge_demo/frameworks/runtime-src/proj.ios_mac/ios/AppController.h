@@ -34,7 +34,7 @@
 
 + (void)doSomething: (NSDictionary *) dict;
 + (void)registerStateChangeCallback: (NSDictionary *) dict;
-+ (void)callLuaFunc:(int)functionId type:(NSString*)type;
++ (void)callLuaFunc:(int)functionId state:(NSString*)state;
 
 @end
 

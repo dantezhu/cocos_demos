@@ -102,7 +102,7 @@ static AppDelegate s_sharedApplication;
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
     cocos2d::Director::getInstance()->pause();
-    [AppController callLuaFunc:onStateChangeCallback type:@"inactive"];
+    [AppController callLuaFunc:onStateChangeCallback state:@"inactive"];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -110,7 +110,7 @@ static AppDelegate s_sharedApplication;
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
     cocos2d::Director::getInstance()->resume();
-    [AppController callLuaFunc:onStateChangeCallback type:@"active"];
+    [AppController callLuaFunc:onStateChangeCallback state:@"active"];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -119,7 +119,7 @@ static AppDelegate s_sharedApplication;
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
     cocos2d::Application::getInstance()->applicationDidEnterBackground();
-    [AppController callLuaFunc:onStateChangeCallback type:@"enterback"];
+    [AppController callLuaFunc:onStateChangeCallback state:@"enterback"];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -127,7 +127,7 @@ static AppDelegate s_sharedApplication;
      Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
     cocos2d::Application::getInstance()->applicationWillEnterForeground();
-    [AppController callLuaFunc:onStateChangeCallback type:@"enterfore"];
+    [AppController callLuaFunc:onStateChangeCallback state:@"enterfore"];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -167,10 +167,10 @@ static AppDelegate s_sharedApplication;
     onStateChangeCallback = [[dict objectForKey:@"callback"] intValue];
 }
 
-+ (void)callLuaFunc:(int)functionId type:(NSString*)type {
++ (void)callLuaFunc:(int)functionId state:(NSString*)state {
     if (functionId <= 0) return;
     cocos2d::LuaBridge::pushLuaFunctionById(functionId);     //回调函数入栈
-    cocos2d::LuaBridge::getStack()->pushString([type UTF8String]); //参数入栈
+    cocos2d::LuaBridge::getStack()->pushString([state UTF8String]); //参数入栈
     cocos2d::LuaBridge::getStack()->executeFunction(1);      //执行函数，参数个数为1
     //cocos2d::LuaBridge::releaseLuaFunctionById(functionId);  //release之前被retain的函数
 }
