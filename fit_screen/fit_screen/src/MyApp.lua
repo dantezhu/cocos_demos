@@ -8,7 +8,10 @@ function M:onCreate()
 
     self:registerView(require("views.MainView"))
 
-    self:showView("MainView")
+end
+
+function M:onRun()
+    self:renderView("MainView")
 end
 
 return M

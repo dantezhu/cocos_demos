@@ -10,9 +10,12 @@ function M:onCreate()
     self:registerView(require("views.TestScrollView"))
     self:registerView(require("views.TestListView"))
 
-    -- self:showView("TestPageView")
-    -- self:showView("TestScrollView")
-    self:showView("TestListView")
+end
+
+function M:onRun()
+    -- self:renderView("TestPageView")
+    -- self:renderView("TestScrollView")
+    self:renderView("TestListView")
 end
 
 return M
