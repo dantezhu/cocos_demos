@@ -12,7 +12,7 @@ function M:onCreate()
 
 end
 
-function M:onRun()
+function M:onRun(params)
     -- self:renderView("TestPageView")
     -- self:renderView("TestScrollView")
     self:renderView("TestListView")

@@ -10,7 +10,7 @@ function M:onCreate()
 
 end
 
-function M:onRun()
+function M:onRun(params)
     self:renderView("MainView")
 end
 
