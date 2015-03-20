@@ -130,12 +130,14 @@ public class AppActivity extends Cocos2dxActivity{
 
     @Override
     protected void onResume() {
+        // 恢复活跃状态
         super.onResume();
         callLuaFunction(onStateChangeCallback, "active");
     }
 
     @Override
     protected void onPause() {
+        // 进入不活跃状态，比如进入后台、闹钟弹出等
         super.onPause();
         callLuaFunction(onStateChangeCallback, "inactive");
     }
