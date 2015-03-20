@@ -12,8 +12,7 @@ function M:onCreate()
     end
 
     local function onStateChange(state)
-        -- ios 按下home键切到后台再回来，状态顺序为: inactive enterback enterfore active
-        -- android 按下home键切到后台再回来，状态顺序为: inactive active
+        -- ios/android 按下home键切到后台再回来，状态顺序为: inactive enterback enterfore active
         neon.logd("state callback: %s", state)
     end
 

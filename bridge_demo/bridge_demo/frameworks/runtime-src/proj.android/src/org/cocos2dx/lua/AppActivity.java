@@ -128,10 +128,17 @@ public class AppActivity extends Cocos2dxActivity{
         return hostIPAdress;
     }
 
+    @Override  
+    protected void onStop() {  
+        super.onStop();  
+        callLuaFunction(onStateChangeCallback, "enterback");
+    } 
+
     @Override
     protected void onResume() {
         // 恢复活跃状态
         super.onResume();
+        callLuaFunction(onStateChangeCallback, "enterfore");
         callLuaFunction(onStateChangeCallback, "active");
     }
 
