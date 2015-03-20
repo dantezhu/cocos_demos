@@ -4,7 +4,7 @@ require("Constants")
 local M = class("MyApp", neon.Neon)
 
 function M:onCreate()
-    neon.logger:setLevel(neon.Log.DEBUG)
+    neon.logger:setLevel(neon.Logger.DEBUG)
 
     self:registerView(require("views.TestPageView"))
     self:registerView(require("views.TestScrollView"))

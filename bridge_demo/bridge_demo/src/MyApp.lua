@@ -5,7 +5,7 @@ local M = class("MyApp", neon.Neon)
 local device = require("cocos.framework.device")
 
 function M:onCreate()
-    neon.logger:setLevel(neon.Log.DEBUG)
+    neon.logger:setLevel(neon.Logger.DEBUG)
 
     local function callback(src)
         neon.logd("callback src: %s", src)
