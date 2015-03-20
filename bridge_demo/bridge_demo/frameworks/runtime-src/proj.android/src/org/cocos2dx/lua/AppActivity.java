@@ -59,6 +59,9 @@ public class AppActivity extends Cocos2dxActivity{
 
     public static int onStateChangeCallback = 0;
 
+    // 是否在前台
+    public boolean inForeground = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,6 +134,8 @@ public class AppActivity extends Cocos2dxActivity{
     @Override  
     protected void onStop() {  
         super.onStop();  
+
+        this.inForeground = false;
         callLuaFunction(onStateChangeCallback, "enterback");
     } 
 
@@ -138,7 +143,12 @@ public class AppActivity extends Cocos2dxActivity{
     protected void onResume() {
         // 恢复活跃状态
         super.onResume();
-        callLuaFunction(onStateChangeCallback, "enterfore");
+
+        if (!this.inForeground) {
+            callLuaFunction(onStateChangeCallback, "enterfore");
+            this.inForeground = true;
+        }
+
         callLuaFunction(onStateChangeCallback, "active");
     }
 
