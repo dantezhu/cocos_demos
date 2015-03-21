@@ -34,7 +34,7 @@
 
 
 
-static int onStateChangeCallback;
+static int onStateChangeCallback = 0;
 
 
 @implementation AppController
