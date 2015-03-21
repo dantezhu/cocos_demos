@@ -8,15 +8,15 @@ function M:onCreate()
     neon.logger:setLevel(neon.logging.DEBUG)
 
     local function callback(src)
-        neon.logd("callback src: %s", src)
+        neon.logger:debug("callback src: %s", src)
     end
 
     local function onStateChange(state)
         -- ios/android 按下home键切到后台再回来，状态顺序为: inactive enterback enterfore active
-        neon.logd("state callback: %s", state)
+        neon.logger:debug("state callback: %s", state)
     end
 
-    neon.logd("platform: %s", device.platform)
+    neon.logger:debug("platform: %s", device.platform)
 
     if device.platform == 'ios' then
         local luaoc = require('cocos.cocos2d.luaoc')

@@ -1,11 +1,11 @@
 local M = class("TestPageView", neon.View)
 
 function M:onCreate()
-    neon.loge("onCreate %s", self.__cname)
+    neon.logger:error("onCreate %s", self.__cname)
     
     local pageViewMain = cckit.seekNodeByName(self.root, 'pageview_main')
     pageViewMain:addEventListener(function (sender, eventType)
-            neon.logd("eventType: %s, page: %s", getmetatable(eventType), sender:getCurPageIndex())
+            neon.logger:debug("eventType: %s, page: %s", getmetatable(eventType), sender:getCurPageIndex())
     end)
 end
 
@@ -19,7 +19,7 @@ function M:createRoot()
 end
 
 function M:onRemove()
-    neon.loge("onRemove %s", self.__cname)
+    neon.logger:error("onRemove %s", self.__cname)
 end
 
 return M
