@@ -4,7 +4,7 @@ require("Constants")
 local M = class("MyApp", neon.Neon)
 
 function M:onCreate()
-    neon.logger:setLevel(neon.Logger.WARN)
+    neon.logger:setLevel(neon.logging.DEBUG)
 
     self:registerView(require("views.MainView"))
 

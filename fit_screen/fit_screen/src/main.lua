@@ -9,6 +9,7 @@ require "cckit.init"
 
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
+print(msg)
     neon.loge("----------------------------------------")
     neon.loge("LUA ERROR: " .. tostring(msg) .. "\n")
     neon.loge(debug.traceback())
