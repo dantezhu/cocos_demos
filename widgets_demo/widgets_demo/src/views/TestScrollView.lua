@@ -8,7 +8,7 @@ end
 function M:createRoot()
     local node = cc.CSLoader:createNode("ScrollViewScene.csb")
     
-    cckit.fillScreen(node)
+    cckit.fitScreen(node)
 
     return node
 end
