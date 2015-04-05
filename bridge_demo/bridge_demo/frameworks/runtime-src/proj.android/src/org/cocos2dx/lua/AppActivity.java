@@ -133,6 +133,9 @@ public class AppActivity extends Cocos2dxActivity{
 
     @Override  
     protected void onStop() {  
+        // 当进入后台
+        // 程序进入后台再进入前台的顺序是 onPause, onStop, onResume
+        // 所以onResume 要做特殊处理判断是否之前被调用过onStop
         super.onStop();  
 
         this.inForeground = false;
@@ -141,7 +144,7 @@ public class AppActivity extends Cocos2dxActivity{
 
     @Override
     protected void onResume() {
-        // 恢复活跃状态
+        // 恢复活跃状态，比如进入前台、闹钟弹框消失
         super.onResume();
 
         if (!this.inForeground) {
