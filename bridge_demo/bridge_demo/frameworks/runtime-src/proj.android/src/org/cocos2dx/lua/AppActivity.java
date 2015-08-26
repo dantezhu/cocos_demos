@@ -169,7 +169,7 @@ public class AppActivity extends Cocos2dxActivity{
     public static void callLuaFunction(int functionId, String state) {
         if (functionId <=0) return;
 
-        Cocos2dxLuaJavaBridge.callLuaFunctionWithString(onStateChangeCallback, state);
+        Cocos2dxLuaJavaBridge.callLuaFunctionWithString(functionId, state);
     }
     
     private static native boolean nativeIsLandScape();
