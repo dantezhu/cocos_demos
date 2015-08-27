@@ -50,6 +50,7 @@ import android.text.format.Formatter;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
+import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 import org.cocos2dx.lib.Cocos2dxLuaJavaBridge;
 
 
@@ -166,10 +167,17 @@ public class AppActivity extends Cocos2dxActivity{
         onStateChangeCallback = cb;
     }
 
-    public static void callLuaFunction(int functionId, String state) {
+    public static void callLuaFunction(final int functionId, final String state) {
         if (functionId <=0) return;
 
-        Cocos2dxLuaJavaBridge.callLuaFunctionWithString(functionId, state);
+        // 如果直接调用callLuaFunctionWithString，即使在handler.post中，也会崩溃，报错如下:
+        // cocos2dx- call to OpenGL ES API with no current context(logged once per thread)
+        Cocos2dxGLSurfaceView.getInstance().queueEvent(new Runnable() {
+            @Override
+            public void run() {
+                Cocos2dxLuaJavaBridge.callLuaFunctionWithString(functionId, state);
+            }
+        });
     }
     
     private static native boolean nativeIsLandScape();
