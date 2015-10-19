@@ -137,6 +137,7 @@ public class AppActivity extends Cocos2dxActivity{
         // 当进入后台
         // 程序进入后台再进入前台的顺序是 onPause, onStop, onResume
         // 所以onResume 要做特殊处理判断是否之前被调用过onStop
+        // 注意: 所有activity都会触发onStop
         super.onStop();  
 
         this.inForeground = false;
@@ -146,6 +147,7 @@ public class AppActivity extends Cocos2dxActivity{
     @Override
     protected void onResume() {
         // 恢复活跃状态，比如进入前台、闹钟弹框消失
+        // 注意: 只有栈顶的activity会触发onResume
         super.onResume();
 
         if (!this.inForeground) {
@@ -159,6 +161,7 @@ public class AppActivity extends Cocos2dxActivity{
     @Override
     protected void onPause() {
         // 进入不活跃状态，比如进入后台、闹钟弹出等
+        // 注意: 只有栈顶的activity会触发onPause
         super.onPause();
         callLuaFunction(onStateChangeCallback, "inactive");
     }
