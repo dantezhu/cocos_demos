@@ -137,7 +137,7 @@ public class AppActivity extends Cocos2dxActivity{
         // 当进入后台
         // 程序进入后台再进入前台的顺序是 onPause, onStop, onResume
         // 所以onResume 要做特殊处理判断是否之前被调用过onStop
-        // 注意: 所有activity都会触发onStop
+        // 注意: 只有栈顶activity都会触发onStop。比较特殊的是，如果顶层theme是Theme.Translucent，那么下面那一层也会触发onStop
         super.onStop();  
 
         this.inForeground = false;
